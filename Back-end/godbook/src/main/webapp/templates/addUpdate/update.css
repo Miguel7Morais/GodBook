@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding-top: 40px;
     color: #2e323c;
-    background: black;
+    background: #212524;
     position: relative;
     height: 100%;
 }
@@ -58,4 +58,12 @@ body {
     border-radius: 5px;
     border: 0;
     margin-bottom: 1rem;
+}
+
+#show-profile{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
 }

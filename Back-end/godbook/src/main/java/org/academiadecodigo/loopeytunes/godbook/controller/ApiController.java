@@ -3,7 +3,6 @@ package org.academiadecodigo.loopeytunes.godbook.controller;
 import org.academiadecodigo.loopeytunes.godbook.persistence.model.Givers;
 import org.academiadecodigo.loopeytunes.godbook.service.GiverService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -53,6 +52,5 @@ public class ApiController {
         giver.setId(id);
         giverService.updateGiver(giver);
     }
-
 
 }

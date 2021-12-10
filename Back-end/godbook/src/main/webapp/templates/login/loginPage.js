@@ -18,10 +18,10 @@ $(document).ready(function () {
 
     console.log(password);
 
-    for (var i = 1; i <= chars.length; i++) {
+    for (var i = 0; i < chars.length; i++) {
       if (chars[i].username === username && chars[i].password === password) {
 
-        $("#form").attr("action", ("http://192.168.1.14:8080/update" + i));
+        $("#form").attr("action", ("http://192.168.1.14:8080/update" + chars[i].id));
       }
     }
   }

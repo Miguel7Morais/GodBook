@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         $("#photo").attr("src", giver.id + ".jpg");
         $("#name").append(giver.name);
-        $("#username").append(giver.username);
+        $("#username").append("@" + giver.username);
         $("#fullName").attr("value", giver.name);
         $("#phone").attr("value", giver.phoneNumber);
         $("#eMail").attr("value", giver.email);
@@ -68,6 +68,15 @@ $(document).ready(function () {
         });
     }
 
-    $("#update").click(update)
+    $("#update").click(update);
+
+    var showProfile = function(){
+      console.log("here");
+      $("#show-profile").attr("action", ("http://192.168.1.14:8080/" + giver.id));
+    }
+
+  $("#show").click(showProfile);
+
+
 
 });
