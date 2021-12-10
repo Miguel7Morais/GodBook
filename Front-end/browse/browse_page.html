@@ -16,19 +16,57 @@
 
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            
+
             <header class="mb-auto">
-                <div>
-                    <h3 class="float-md-start mb-0">God Book</h3>
-                    <nav class="nav nav-masthead justify-content-center float-xl-end">
+
+                <div id="header">
+                  
+                    
+                    <div id="main">
+                        <button class="openbtn" onclick="openNav()">&#9776;</button>
+                    </div>
+                    <div><a href="http://192.168.1.14:8080/" class="float-md-start mb-0"><h3>God Book</h3></a></div>
+                   
+                    <nav id="nav" class="nav nav-masthead justify-content-center float-xl-end">
                         <a class="nav-link" href="#">Personal Profile</a>
                         <a class="nav-link" href="#">Logout</a>
-                        
                     </nav>
                 </div>
-                
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a id="comedy" href="#">Comedy</a>
+                <a id="mentalhealth" href="#">Mental Health</a>
+                <a id="music" href="#">Music</a>
+                <a id="selfimprovement" href="#">Self-Improvement</a>
+                <a id="other" href="#">Other</a>
+                <a id="relationships" href="#">Relationship</a>
+                <a id="sports" href="#">Sports</a>
+                <a id="religion" href="#">Religion</a>
+            </div>
             </header>
-               
+            
+
+
+            <!-- <div class="row">
+                <div class="col-3">
+                    <div class="nav flex-column nav-pills text-center" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-home-tab" data-mdb-toggle="pill" href="#v-pills-home"
+                            role="tab" aria-controls="v-pills-home" aria-selected="true" class="nav-link"
+                            href="#">Personal Profile</a>
+                        <a class="nav-link active"
+                        id="v-pills-home-tab"
+                        data-mdb-toggle="pill"
+                        href="#v-pills-home"
+                        role="tab"
+                        aria-controls="v-pills-home"
+                        aria-selected="true" class="nav-link" href="#">Logout</a>
+
+                    </div>
+
+                </div>
+            </div> -->
+
             <div id="content">
                 <div id="cards" class="d-flex flex-wrap">
                 </div>
