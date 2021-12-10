@@ -16,8 +16,8 @@ $(document).ready(function () {
         '.jpg" width="100px" height="100px" class="img-fluid rounded-start" alt="..."></div><div id="giver" class="col-md-8"><div class="card-body"><h5 id="giverName" class="card-title">' +
         element.name +
         '</h5><p id="description" class="card-text"> ' +
-        element.description +
-        '</p><p class="card-text"><small id="category" class="text-muted"></small></p></div></div></div></button></a></div>';
+        element.aboutMe +
+        '</p><p class="card-text"><small id="category" class="text-muted">' + element.category +'</small></p></div></div></div></button></a></div>';
 
       $("#cards").append(test2);
     });
@@ -39,8 +39,8 @@ $(document).ready(function () {
         '"><button id="cardsytle" class="card mb-3" style="max-width: 540px;"><div class="row g-0"><div id="photo" class="col-md-4"><img src='+ element.id + '.jpg class="img-fluid rounded-start" alt="..."></div><div id="giver" class="col-md-8"><div class="card-body"><h5 id="giverName" class="card-title">' +
         element.name +
         '</h5><p id="description" class="card-text"> ' +
-        element.description +
-        '</p><p class="card-text"><small id="category" class="text-muted"></small></p></div></div></div></button></a></div>';
+        element.aboutMe +
+        '</p><p class="card-text"><small id="category" class="text-muted">' + element.category +'</small></p></div></div></div></button></a></div>';
       console.log(test2);
       return $("#cards").append(test2);
     });
@@ -60,8 +60,8 @@ $(document).ready(function () {
         '"><button id="cardsytle" class="card mb-3" style="max-width: 540px;"><div class="row g-0"><div id="photo" class="col-md-4"><img src='+ element.id + '.jpg class="img-fluid rounded-start" alt="..."></div><div id="giver" class="col-md-8"><div class="card-body"><h5 id="giverName" class="card-title">' +
         element.name +
         '</h5><p id="description" class="card-text"> ' +
-        element.description +
-        '</p><p class="card-text"><small id="category" class="text-muted"></small></p></div></div></div></button></a></div>';
+        element.aboutMe +
+        '</p><p class="card-text"><small id="category" class="text-muted">' + element.category +'</small></p></div></div></div></button></a></div>';
       console.log(test2);
       return $("#cards").append(test2);
     });
@@ -81,8 +81,8 @@ $(document).ready(function () {
         '"><button id="cardsytle" class="card mb-3" style="max-width: 540px;"><div class="row g-0"><div id="photo" class="col-md-4"><img src='+ element.id + '.jpg class="img-fluid rounded-start" alt="..."></div><div id="giver" class="col-md-8"><div class="card-body"><h5 id="giverName" class="card-title">' +
         element.name +
         '</h5><p id="description" class="card-text"> ' +
-        element.description +
-        '</p><p class="card-text"><small id="category" class="text-muted"></small></p></div></div></div></button></a></div>';
+        element.aboutMe +
+        '</p><p class="card-text"><small id="category" class="text-muted">' + element.category +'</small></p></div></div></div></button></a></div>';
       console.log(test2);
       return $("#cards").append(test2);
     });
@@ -102,8 +102,8 @@ $(document).ready(function () {
         '"><button id="cardsytle" class="card mb-3" style="max-width: 540px;"><div class="row g-0"><div id="photo" class="col-md-4"><img src='+ element.id + '.jpg class="img-fluid rounded-start" alt="..."></div><div id="giver" class="col-md-8"><div class="card-body"><h5 id="giverName" class="card-title">' +
         element.name +
         '</h5><p id="description" class="card-text"> ' +
-        element.description +
-        '</p><p class="card-text"><small id="category" class="text-muted"></small></p></div></div></div></button></a></div>';
+        element.aboutMe +
+        '</p><p class="card-text"><small id="category" class="text-muted">' + element.category +'</small></p></div></div></div></button></a></div>';
       console.log(test2);
       return $("#cards").append(test2);
     });
@@ -123,8 +123,8 @@ $(document).ready(function () {
         '"><button id="cardsytle" class="card mb-3" style="max-width: 540px;"><div class="row g-0"><div id="photo" class="col-md-4"><img src='+ element.id + '.jpg class="img-fluid rounded-start" alt="..."></div><div id="giver" class="col-md-8"><div class="card-body"><h5 id="giverName" class="card-title">' +
         element.name +
         '</h5><p id="description" class="card-text"> ' +
-        element.description +
-        '</p><p class="card-text"><small id="category" class="text-muted"></small></p></div></div></div></button></a></div>';
+        element.aboutMe +
+        '</p><p class="card-text"><small id="category" class="text-muted">' + element.category +'</small></p></div></div></div></button></a></div>';
       console.log(test2);
       return $("#cards").append(test2);
     });
@@ -144,8 +144,8 @@ $(document).ready(function () {
         '"><button id="cardsytle" class="card mb-3" style="max-width: 540px;"><div class="row g-0"><div id="photo" class="col-md-4"><img src='+ element.id + '.jpg class="img-fluid rounded-start" alt="..."></div><div id="giver" class="col-md-8"><div class="card-body"><h5 id="giverName" class="card-title">' +
         element.name +
         '</h5><p id="description" class="card-text"> ' +
-        element.description +
-        '</p><p class="card-text"><small id="category" class="text-muted"></small></p></div></div></div></button></a></div>';
+        element.aboutMe +
+        '</p><p class="card-text"><small id="category" class="text-muted">' + element.category +'</small></p></div></div></div></button></a></div>';
       console.log(test2);
       return $("#cards").append(test2);
     });
@@ -165,8 +165,8 @@ $(document).ready(function () {
         '"><button id="cardsytle" class="card mb-3" style="max-width: 540px;"><div class="row g-0"><div id="photo" class="col-md-4"><img src='+ element.id + '.jpg class="img-fluid rounded-start" alt="..."></div><div id="giver" class="col-md-8"><div class="card-body"><h5 id="giverName" class="card-title">' +
         element.name +
         '</h5><p id="description" class="card-text"> ' +
-        element.description +
-        '</p><p class="card-text"><small id="category" class="text-muted"></small></p></div></div></div></button></a></div>';
+        element.aboutMe +
+        '</p><p class="card-text"><small id="category" class="text-muted">' + element.category +'</small></p></div></div></div></button></a></div>';
       console.log(test2);
       return $("#cards").append(test2);
     });
@@ -186,8 +186,8 @@ $(document).ready(function () {
         '"><button id="cardsytle" class="card mb-3" style="max-width: 540px;"><div class="row g-0"><div id="photo" class="col-md-4"><img src='+ element.id + '.jpg class="img-fluid rounded-start" alt="..."></div><div id="giver" class="col-md-8"><div class="card-body"><h5 id="giverName" class="card-title">' +
         element.name +
         '</h5><p id="description" class="card-text"> ' +
-        element.description +
-        '</p><p class="card-text"><small id="category" class="text-muted"></small></p></div></div></div></button></a></div>';
+        element.aboutMe +
+        '</p><p class="card-text"><small id="category" class="text-muted">' + element.category +'</small></p></div></div></div></button></a></div>';
       console.log(test2);
       return $("#cards").append(test2);
     });

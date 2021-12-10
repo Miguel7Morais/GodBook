@@ -1,5 +1,9 @@
 package org.academiadecodigo.loopeytunes.godbook.controller;
 
+import lombok.Setter;
+import org.academiadecodigo.loopeytunes.godbook.converters.GiverDtoToGiver;
+import org.academiadecodigo.loopeytunes.godbook.converters.GiverToGiverDto;
+import org.academiadecodigo.loopeytunes.godbook.dto.GiverDto;
 import org.academiadecodigo.loopeytunes.godbook.persistence.model.Givers;
 import org.academiadecodigo.loopeytunes.godbook.service.GiverService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,32 +16,32 @@ import java.util.List;
 public class ApiController {
 
     private final GiverService giverService;
+    private GiverDtoToGiver giverDtoToGiver;
+    private GiverToGiverDto giverToGiverDto;
 
     @Autowired
-    public ApiController(GiverService giverService) {
+    public ApiController(GiverService giverService, GiverDtoToGiver giverDtoToGiver, GiverToGiverDto giverToGiverDto) {
         this.giverService = giverService;
+        this.giverDtoToGiver = giverDtoToGiver;
+        this.giverToGiverDto = giverToGiverDto;
     }
 
     @CrossOrigin
     @GetMapping
-    public List<Givers> getGivers() {
-        return giverService.getGivers();
+    public List<GiverDto> getGivers() {
+        return giverToGiverDto.convert(giverService.getGivers());
     }
 
     @CrossOrigin
     @GetMapping(path = "/{id}")
-    public Givers getGiver(@PathVariable Integer id) {
-        Givers giver = giverService.getGiver(id);
-        System.out.println(giver.getAge());
-        System.out.println(giver);
-        System.out.println("********************+" + giver.getId());
-        return giver;
+    public GiverDto getGiver(@PathVariable Integer id) {
+        return giverToGiverDto.convert(giverService.getGiver(id));
     }
 
     @CrossOrigin
     @PostMapping
-    public void addGiver(@RequestBody Givers giver) {
-        giverService.addGiver(giver);
+    public void addGiver(@RequestBody GiverDto giver) {
+        giverService.addGiver(giverDtoToGiver.convert(giver));
     }
 
     @CrossOrigin
@@ -48,9 +52,9 @@ public class ApiController {
 
     @CrossOrigin
     @PutMapping(path = "/{id}")
-    public void updateGiver(@RequestBody Givers giver, @PathVariable Integer id) {
+    public void updateGiver(@RequestBody GiverDto giver, @PathVariable Integer id) {
         giver.setId(id);
-        giverService.updateGiver(giver);
+        giverService.updateGiver(giverDtoToGiver.convert(giver));
     }
 
 }

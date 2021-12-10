@@ -1,11 +1,13 @@
 package org.academiadecodigo.loopeytunes.godbook.dto;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.academiadecodigo.loopeytunes.godbook.persistence.model.Category;
-
 import javax.validation.constraints.*;
 
+@Getter
+@Setter
 public class GiverDto {
-
 
     private int id;
 
@@ -34,7 +36,6 @@ public class GiverDto {
     @NotBlank(message = "category is mandatory.")
     private Category category;
 
-
     private String skills;
 
     @NotNull(message = "experiences is mandatory.")
@@ -61,110 +62,6 @@ public class GiverDto {
     @NotBlank(message = "password is mandatory.")
     @Size(max = 30, message = "Maximum of 30")
     private String password;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAboutMe() {
-        return aboutMe;
-    }
-
-    public void setAboutMe(String aboutMe) {
-        this.aboutMe = aboutMe;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-    public String getSkills() {
-        return skills;
-    }
-
-    public void setSkills(String skills) {
-        this.skills = skills;
-    }
-
-    public String getExperiences() {
-        return experiences;
-    }
-
-    public void setExperiences(String experiences) {
-        this.experiences = experiences;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     @Override
     public String toString() {
