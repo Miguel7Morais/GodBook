@@ -1,7 +1,8 @@
 $(document).ready(function () {
     var giver;
-
-
+    var url = window.location.pathname;
+    var idStr = url.split("/");
+    var id = parseInt(idStr[idStr.length - 1]);
 
     function successCallback(response) {
 
@@ -27,7 +28,7 @@ $(document).ready(function () {
 
     // perform an ajax http get request
     $.ajax({
-        url: 'http://192.168.1.14:8080/api/1',
+        url: 'http://192.168.1.14:8080/api/' + id,
         crossOrigin: true,
         async: true,
         success: successCallback,
