@@ -1,6 +1,8 @@
 $(document).ready(function () {
     var giver;
-
+    var url = window.location.pathname;
+    var idStr = url.split("/");
+    var id = parseInt(idStr[idStr.length - 1]);
 
 
     function successCallback(response) {
@@ -8,14 +10,16 @@ $(document).ready(function () {
         giver = response;
 
         $("#name").append(giver.name);
-        $("#phoneNumber").append(giver.phoneNumber);
-        $("#email").append(giver.email);
-        $("#aboutMe").append(giver.aboutMe);
-        $("#category").append(giver.category);
-        $("#skills").append(giver.skills);
-        $("#experiences").append(giver.experiences);
-        $("#location").append(giver.location);
-        $("#age").append(giver.age);
+        $("#username").append(giver.username);
+        $("#fullName").attr("value", giver.name);
+        $("#phone").attr("value", giver.phoneNumber);
+        $("#eMail").attr("value", giver.email);
+        $("#About").attr("value", giver.aboutMe);
+        $("#Category").attr("value", giver.category);
+        $("#Skills").attr("value", giver.skills);
+        $("#Experiences").attr("value", giver.experiences);
+        $("#Location").attr("value", giver.location);
+        $("#age").attr("value", giver.age);
 
         var src1 = giver.imgUrl;
         $("#photo").attr("src", src1);
@@ -27,11 +31,44 @@ $(document).ready(function () {
 
     // perform an ajax http get request
     $.ajax({
-        url: 'http://192.168.1.14:8080/api/1',
+        url: 'http://192.168.1.14:8080/api/' + id,
         crossOrigin: true,
         async: true,
         success: successCallback,
         error: errorCallback
     });
+
+    var update = function () {
+        var giverUpdate = { "id": giver.id,
+            "name": $("#fullName").val(),
+            "phoneNumber": $("#phone").val(),
+            "email": $("#eMail").val(),
+            "aboutMe": $("#About").val(),
+            "imgUrl": giver.imgUrl,
+            "category": $("#Category").val(),
+            "skills": $("#Skills").val(),
+            "experiences": $("#Experiences").val(),
+            "location": $("#Location").val(),
+            "age": $("#age").val(),
+            "username":null,
+            "password":null
+        };
+
+        
+        $.ajax({
+            type: "PUT",
+            url: 'http://192.168.1.14:8080/api/' + giver.id,
+            contentType: 'application/json',
+            data: JSON.stringify(giverUpdate)
+        }).done(function () {
+            console.log('SUCCESS');
+        }).fail(function (msg) {
+            console.log('FAIL');
+        }).always(function (msg) {
+            console.log('ALWAYS');
+        });
+    }
+
+    $("#update").click(update)
 
 });
