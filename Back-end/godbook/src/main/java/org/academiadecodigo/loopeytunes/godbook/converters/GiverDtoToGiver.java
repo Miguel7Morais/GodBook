@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class GiverDtoToGiver {
+public class GiverDtoToGiver implements Convert<Givers, GiverDto>{
 
   public Givers convert(GiverDto giverDto) {
 

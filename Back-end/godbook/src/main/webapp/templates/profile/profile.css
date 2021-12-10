@@ -94,3 +94,8 @@ hr .new1 {
 #exp {
     margin: 0;
 }
+
+#container {
+    display: flex;
+
+}

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class GiverService {
+public class GiverService implements ServiceInterface{
 
     private GiversDao giversDao;
 

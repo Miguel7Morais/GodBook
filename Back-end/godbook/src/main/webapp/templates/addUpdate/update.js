@@ -49,8 +49,8 @@ $(document).ready(function () {
             "experiences": $("#Experiences").val(),
             "location": $("#Location").val(),
             "age": $("#age").val(),
-            "username":null,
-            "password":null
+            "username": giver.username,
+            "password": giver.password
         };
 
 
