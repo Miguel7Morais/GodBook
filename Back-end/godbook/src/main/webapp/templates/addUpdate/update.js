@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var giver;
     var url = window.location.pathname;
-    var idStr = url.split("/");
+    var idStr = url.split("update");
     var id = parseInt(idStr[idStr.length - 1]);
 
 
@@ -9,6 +9,7 @@ $(document).ready(function () {
 
         giver = response;
 
+        $("#photo").attr("src", giver.id + ".jpg");
         $("#name").append(giver.name);
         $("#username").append(giver.username);
         $("#fullName").attr("value", giver.name);
@@ -21,8 +22,6 @@ $(document).ready(function () {
         $("#Location").attr("value", giver.location);
         $("#age").attr("value", giver.age);
 
-        var src1 = giver.imgUrl;
-        $("#photo").attr("src", src1);
     }
 
     function errorCallback(request, status, error) {
@@ -54,7 +53,7 @@ $(document).ready(function () {
             "password":null
         };
 
-        
+
         $.ajax({
             type: "PUT",
             url: 'http://192.168.1.14:8080/api/' + giver.id,

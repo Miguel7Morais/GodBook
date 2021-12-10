@@ -46,7 +46,7 @@ public class MainController {
     @GetMapping(path = "/{id}.jpg")
     public String getProfileImg(@PathVariable Integer id) {
 
-      return "templates/profile/" + id + ".jpg";
+      return "photos/" + id + ".jpg";
     }
 
     @GetMapping(path = "/browse")
@@ -62,5 +62,20 @@ public class MainController {
     @GetMapping(path = "/browse.js")
     public String browseCss() {
       return "templates/browse/browse.js";
+    }
+
+    @GetMapping(path = "/update{id}")
+    public String update() {
+      return "templates/addUpdate/update.html";
+    }
+
+    @GetMapping(path = "/update.css")
+    public String updateCss() {
+      return "templates/addUpdate/update.css";
+    }
+
+    @GetMapping(path = "/update.js")
+    public String updateJs() {
+      return "templates/addUpdate/update.js";
     }
 }
