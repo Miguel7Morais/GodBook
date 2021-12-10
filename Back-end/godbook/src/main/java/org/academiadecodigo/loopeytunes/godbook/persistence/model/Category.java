@@ -8,7 +8,7 @@ public enum Category {
     SELF_DEVELOPMENT,
     MENTAL_HEALTH,
     RELIGION,
-    SEX,
+    RELATIONSHIPS,
     OTHER
 
 
